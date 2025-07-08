@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asif's Portfolio</title>
+  <link rel="icon" type="image/png" href="logo2.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+
+  <img class="logo" src="logo2.png" alt="Logo" />
+  <h2>MY WORLD</h2>
+  <a class="resume-btn" href="#home">Home</a>
+  <a class="resume-btn" href="#projects">Projects</a>
+  <a class="resume-btn" href="#about">About</a>
+  <a class="resume-btn" href="#contact">Contact</a>
+  <button class="resume-btn" onclick="window.open('Resume.pdf', '_blank')">Resume</button>
+  <button class="dark-toggle" onclick="toggleTheme()">🌙</button>
+</nav>
+  <section class="hero zoom-in-element" id="home">  
+    <div class="content">  
+      <h3>Hi I'm</h3>  
+      <h1>Asif</h1>  
+      <p>a BCA student, interested in coding, web development, and doing new experiments.  
+    Exploring new technologies and pushing boundaries—I'm always ready to tackle the next challenge in web development.  
+      </p>  
+    </div>  
+    <div class="circle">  
+      <img src="myp.png" alt="Profile" />  
+    </div>  
+  </section>    
+  <section id="projects">  
+    <h2 id="section-title" class="zoom-in-element" >Projects</h2>  
+    <div class="projects-container">  
+      <div class="project">  
+        <h3><a style="text-decoration: none; color: white;" href="https://asif-an.github.io/My-Portfolio/">Portfolio Website</a></h3>  
+        <p>A personal website built using HTML, CSS showcasing my skills and projects.</p>  
+      </div>  
+      <div class="project">  
+        <h3><a style="text-decoration: none; color: white;" href="https://asif-an.github.io/Whether-App/">Weather Website</a></h3>  
+        <p>Fetches weather data from an API and displays current weather by city.</p>  
+      </div> 
+    </div>  
+    <div style="text-align: center; margin-top: 30px;">
+    <button onclick="window.open('https://github.com/asif-an?tab=repositories', '_blank')" 
+      style="padding: 12px 24px; font-size: 16px; background-color: rgba(255, 255, 255, 0.1);; border: none; color:white; border-radius: 8px; cursor: pointer; transition: 0.3s;">
+      View All Projects
+    </button> 
+    </div>
+  </section>  
+  <section id="about" class="zoom-in-element">  
+    <h2 id="section-title">About Me</h2>  
+    <div class="about-container">  
+      <div class="about-card">  
+        <h3>Background</h3>  
+        <p>I am a BCA student passionate about coding, web development, and learning new technologies.</p>  
+      </div>  
+      <div class="about-card">  
+        <h3>Skills</h3>  
+        <p>HTML, CSS, JavaScript,Java, Python, and Responsive Design.</p>  
+      </div>
+    </div> 
+    <div style="text-align: center; margin-top: 30px;">
+    <button onclick="window.open('http://127.0.0.1:5500/cert.html', '_blank')" 
+      style="padding: 12px 24px; font-size: 16px; background-color: rgba(255, 255, 255, 0.1);; border: none; color:white; border-radius: 8px; cursor: pointer; transition: 0.3s; ;">
+      Certificate's
+    </button>    
+    </div>
+  </section>  
+  <section id="contact" class="zoom-in-element">  
+    <h2 id="section-title">Contact Me</h2>  
+    <div class="contact-details">  
+      <p class="k"><span class="h">Mobile number:</span> <span class="l">9972146138</span></p>  
+      <ul class="hi">  
+        <li><a href="https://www.instagram.com/asif_______7860/" target="_blank"><img src="insta.png" alt="Instagram"></a></li>    
+        <li><a href="https://www.linkedin.com/in/asif-nadaf" target="_blank"><img src="linkedin.png" alt="Linkedin"></a></li>  
+         <li><a href="https://github.com/asif-an" target="_blank"><img src="github.png" alt="YouTube"></a></li>  
+      </ul>  
+    </div>  
+  </section> 
+  
+<script>
+  const allElements = document.querySelectorAll('body *:not(nav):not(script):not(style)');
+
+  allElements.forEach(el => {
+    if (el.offsetHeight > 0 && el.offsetWidth > 0) {
+      el.classList.add('zoom-in-element');
+    }
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible'); 
+      } else {
+        entry.target.classList.remove('visible'); 
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.zoom-in-element').forEach(el => observer.observe(el));
+</script>
+<script>
+  const darkToggle = document.querySelector('.dark-toggle');
+  darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+
+
+</body>
+</html>
