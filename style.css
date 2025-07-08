@@ -295,7 +295,7 @@ section {
     flex-wrap: nowrap;
     padding: 15px 20px;
   }
-  nav a{
+  .navbar a{
     display: none;
   }
 
