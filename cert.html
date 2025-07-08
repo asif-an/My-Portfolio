@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificates</title>
+  <style>
     body {
-     background:linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
-     font-family: Arial, sans-serif;
-     color: #fff;
-     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 100px 20px 50px;
-    flex-wrap: wrap;
-    animation: fadeInBody 1.5s ease;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 40px 20px;
+      animation: fadeInBody 1.5s ease;
     }
+
+    .certificate-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .certificate-container img {
+      height: 200px;
+      width: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+    }
+
+    .certificate-container img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .certificate-container img {
+        width: 90%;
+        height: auto;
+      }
+    }
+
     @keyframes fadeInBody {
-    from { opacity: 0; }
-    to { opacity: 1; }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-    img{
-        height: 200px;
-        width: 300px;
-    }
-    </style>
+  </style>
 </head>
 <body>
+  <div class="certificate-container">
     <img src="img1.png" alt="certificate image1">
     <img src="img2.png" alt="certificate image2">
+  </div>
 </body>
 </html>
