@@ -295,6 +295,9 @@ section {
     flex-wrap: nowrap;
     padding: 15px 20px;
   }
+  nav a{
+    display: none;
+  }
 
   .logo {
     height: 40px;
