@@ -181,7 +181,7 @@ section {
   border-radius: 10px;
 }
 
-.section-title:hover {
+#section-title:hover {
   animation: glow 2s infinite ;
   cursor: pointer;
 }
