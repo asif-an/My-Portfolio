@@ -280,6 +280,9 @@ section {
     text-align: center;
     padding: 50px 20px;
   }
+  nav a {
+  display: none;
+}
 
   nav ul {
     flex-direction: column;
@@ -295,9 +298,9 @@ section {
     flex-wrap: nowrap;
     padding: 15px 20px;
   }
-  .navbar a{
-    display: none;
-  }
+  nav a {
+  display: none;
+}
 
   .logo {
     height: 40px;
